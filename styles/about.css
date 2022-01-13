@@ -46,7 +46,7 @@ img.user-image {
 }
 
 
-@media (max-width: 1180px) {
+@media (max-width: 768px) {
     #about {
         grid-template-areas:
         "title title"
