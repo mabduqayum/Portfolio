@@ -44,3 +44,14 @@ img.user-image {
     top: 40%;
     max-width: 100%;
 }
+
+
+@media (max-width: 1180px) {
+    #about {
+        grid-template-areas:
+        "title title"
+        "pics pics"
+        "pst pst"
+        "pnd pnd";
+    }
+}
