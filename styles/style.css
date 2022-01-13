@@ -1,0 +1,28 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+section {
+    padding: 8px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+}
+
+
+@-webkit-keyframes placeholderShimmer {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100vw 0;
+    }
+}

@@ -1,0 +1,46 @@
+#about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "title title"
+        "pics pst"
+        "pics pnd";
+}
+
+
+#about > h2:first-child {
+    grid-area: title;
+    justify-self: center;
+}
+
+#about > .stack {
+    grid-area: pics;
+}
+
+#about > p:nth-of-type(1) {
+    grid-area: pst;
+    align-self: end;
+    max-width: 600px;
+}
+
+#about > p:nth-of-type(2) {
+    grid-area: pnd;
+}
+
+.stack {
+    position: relative;
+    height: 550px;
+}
+
+img.keyboard {
+    position: absolute;
+    top: 20px;
+    max-width: 100%;
+}
+
+img.user-image {
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    max-width: 100%;
+}
