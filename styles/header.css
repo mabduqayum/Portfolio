@@ -1,10 +1,3 @@
-@font-face {
-    font-family: "neon-tubes-2-regular";
-    src: url("https://assets.codepen.io/2585/NeonTubes2.otf") format("woff"),
-    url("https://assets.codepen.io/2585/NeonTubes2.otf") format("opentype"),
-    url("https://assets.codepen.io/2585/NeonTubes2.otf") format("truetype");
-}
-
 header {
     background: url("../assets/images/bg.jpg") no-repeat fixed;
     background-size: cover;
@@ -16,6 +9,7 @@ header {
 .main-nav {
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 .main-nav-items {
@@ -54,17 +48,7 @@ header {
     width: 100%;
     font-size: 60px;
     text-align: center;
-    /*text-shadow: 4px 4px 0 rgba(255, 0, 180, 0.5);*/
+    text-shadow: 3px 3px 0 #FF000080;
     text-transform: uppercase;
-}
-
-.neon-blue {
-    font-family: "neon-tubes-2-regular", sans-serif;
     font-style: italic;
-    text-shadow: 0 0 2.5vmin var(--neon-glow),
-    0 0 10vmin var(--neon-glow),
-    0 0 15vmin var(--neon-glow);
-
-    --neon: hsl(192, 100%, 95%);
-    --neon-glow: hsl(194, 100%, 40%);
 }
