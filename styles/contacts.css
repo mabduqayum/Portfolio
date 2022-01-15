@@ -1,0 +1,12 @@
+#contacts {
+
+}
+.icons {
+    display: flex;
+    column-gap: 16px;
+}
+
+#contacts .icons > img {
+    width: 50px;
+    height: 50px;
+}

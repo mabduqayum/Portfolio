@@ -2,30 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--todo: ask akai Daler about , maximum-scale=1.5, minimum-scale=0.5-->
     <title>Ali</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/about.css">
     <link rel="stylesheet" href="styles/portfolio.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/contacts.css">
 </head>
 <body>
 <header>
     <nav class="main-nav">
-        <ul class="main-nav-items">
-            <li class="main-nav-item">
-                <a href="" class="active">Main</a>
-            </li>
-            <li class="main-nav-item">
-                <a href="#about">About</a>
-            </li>
-            <li class="main-nav-item">
-                <a href="#portfolio">Portfolio</a>
-            </li>
-            <li class="main-nav-item">
-                <a href="#contacts">Contacts</a>
-            </li>
-        </ul>
+        <div class="main-nav-item">
+            <a href="" class="active">Main</a>
+        </div>
+        <div class="main-nav-item">
+            <a href="#about">About</a>
+        </div>
+        <div class="main-nav-item">
+            <a href="#portfolio">Portfolio</a>
+        </div>
+        <div class="main-nav-item">
+            <a href="#contacts">Contacts</a>
+        </div>
     </nav>
     <h1 class="main-nav-title neon-blue">Ali, Front-end developer</h1>
 </header>
@@ -62,13 +63,15 @@
 </section>
 <section id="contacts">
     <h2>Contacts</h2>
-    <img src="assets/icons/github.svg" alt="github.svg" class="icon">
-    <img src="assets/icons/facebook.svg" alt="github.svg" class="icon">
-    <img src="assets/icons/instagram.svg" alt="github.svg" class="icon">
-    <img src="assets/icons/twitter.svg" alt="github.svg" class="icon">
+    <div class="icons">
+        <img src="assets/icons/github.svg" alt="github.svg">
+        <img src="assets/icons/facebook.svg" alt="github.svg">
+        <img src="assets/icons/instagram.svg" alt="github.svg">
+        <img src="assets/icons/twitter.svg" alt="github.svg">
+    </div>
 </section>
 <footer>Footer</footer>
 </body>
-<script src="script/main.js"></script>
+<script src="main.js"></script>
 </html>
 

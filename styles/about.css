@@ -48,10 +48,18 @@ img.user-image {
 
 @media (max-width: 768px) {
     #about {
+        grid-template-columns: 1fr;
         grid-template-areas:
-        "title title"
-        "pics pics"
-        "pst pst"
-        "pnd pnd";
+        "title"
+        "pics"
+        "pst"
+        "pnd";
     }
+
+    img.user-image {
+        left: 20%;
+        top: 20%;
+        max-width: calc(100vw - 20% - 16px);
+    }
+
 }

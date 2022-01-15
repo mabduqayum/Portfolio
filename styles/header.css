@@ -8,21 +8,15 @@ header {
 
 .main-nav {
     position: sticky;
+    display: flex;
+    background-image: linear-gradient(90deg, #1d4350, #a43931);
+    user-select: none;
     top: 0;
     z-index: 10;
 }
 
-.main-nav-items {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-image: linear-gradient(90deg, #1d4350, #a43931);
-    user-select: none;
-}
 
 .main-nav-item {
-    float: left;
 }
 
 
@@ -35,11 +29,11 @@ header {
 }
 
 .main-nav-item > a:hover {
-    background-color: #00000080;
+    background-color: #00000050;
 }
 
 .main-nav-item > a.active {
-    background-color: #04AA6D;
+    background-color: #00000080;
 }
 
 .main-nav-title {
@@ -51,4 +45,11 @@ header {
     text-shadow: 3px 3px 0 #FF000080;
     text-transform: uppercase;
     font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+    .main-nav-title {
+        font-size: 28px;
+    }
 }
