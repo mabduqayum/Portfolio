@@ -3,16 +3,13 @@
 let mainNav = document.querySelectorAll('.main-nav-item > a')
 let activeNav = 0;
 
-for (const mainNavElement of mainNav) {
+for (let i = 0; i < mainNav.length; i++) {
+    const mainNavElement = mainNav[i];
     mainNavElement.addEventListener('click', () => {
-        if (!mainNavElement.hasAttribute('active')) {
-            changeActiveNav(activeNav, mainNavElement);
-            console.log(mainNavElement)
+        if (!mainNavElement.hasAttribute('class=active')) {
+            mainNav[activeNav].classList.remove('active')
+            mainNavElement.classList.add('active');
+            activeNav = i;
         }
     })
-}
-
-function changeActiveNav(id, elem) {
-    mainNav[activeNav].toggleAttribute('active');
-    elem.toggleAttribute('active');
 }
