@@ -1,4 +1,4 @@
-// todo: use strict
+"use strict"
 
 let mainNav = document.querySelectorAll('.main-nav-item > a')
 let activeNavIndex = 0;
