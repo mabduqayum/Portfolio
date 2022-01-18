@@ -20,7 +20,7 @@
 #about > p:nth-of-type(1) {
     grid-area: pst;
     align-self: end;
-    max-width: 600px;
+    max-width: 40rem;
 }
 
 #about > p:nth-of-type(2) {
@@ -29,19 +29,18 @@
 
 .stack {
     position: relative;
-    height: 550px;
+    height: 30rem;
 }
 
 img.keyboard {
     position: absolute;
-    top: 20px;
     max-width: 100%;
 }
 
 img.user-image {
     position: absolute;
-    left: 40%;
-    top: 40%;
+    left: 30%;
+    top: 30%;
     max-width: 100%;
 }
 
@@ -59,7 +58,7 @@ img.user-image {
     img.user-image {
         left: 20%;
         top: 20%;
-        max-width: calc(100vw - 20% - 16px);
+        max-width: calc(100vw - 20% - 1rem);
     }
 
 }

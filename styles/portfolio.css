@@ -2,11 +2,11 @@
 }
 
 .project img {
-    max-width: 700px;
+    max-width: 50rem;
 }
 
 @media (max-width: 768px) {
     .project img {
-        max-width: calc(100vw - 16px);
+        max-width: calc(100vw - 2rem);
     }
 }
