@@ -55,10 +55,20 @@ img.user-image {
         "pnd";
     }
 
+    .stack {
+        position: relative;
+        height: 24rem;
+    }
+
+    img.keyboard {
+        position: absolute;
+        max-width: 80%;
+    }
+
     img.user-image {
         left: 20%;
         top: 20%;
-        max-width: calc(100vw - 20% - 1rem);
+        max-width: calc(100vw - 20% - 2rem);
     }
 
 }

@@ -1,8 +1,26 @@
+
+
 #portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+#portfolio > .portfolio-title {
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+#portfolio .project {
 }
 
 .project img {
-    max-width: 50rem;
+    max-width: 40rem;
+}
+
+.project p {
+    text-align: center;
 }
 
 @media (max-width: 768px) {
