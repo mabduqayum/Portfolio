@@ -20,7 +20,12 @@
 }
 
 .project p {
+    color: #08355d;
     text-align: center;
+    cursor: pointer;
+}
+.project p:hover {
+    color: #0f5ea4;
 }
 
 @media (max-width: 768px) {

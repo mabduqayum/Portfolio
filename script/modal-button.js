@@ -1,9 +1,13 @@
-// Get the button that opens the modal
-let modalBtn = document.querySelector("#open-modal-btn");
+let projects = document.querySelectorAll('.project > p');
+
+for (const project of projects) {
+    project.addEventListener('click', () => projectModal(project));
+}
 
 
-// When the user clicks on the button, open the modal
-modalBtn.onclick = function () {
+function projectModal(element) {
+    let project = element.parentElement;
+
     let myModal = document.createElement('div');
     myModal.id = 'my-modal';
     myModal.className = 'show-modal';
