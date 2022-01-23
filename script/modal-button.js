@@ -1,4 +1,4 @@
-let projects = document.querySelectorAll('.project > p');
+let projects = document.querySelectorAll('.project');
 
 for (const project of projects) {
     project.addEventListener('click', () => projectModal(project));
@@ -6,7 +6,8 @@ for (const project of projects) {
 
 
 function projectModal(element) {
-    let project = element.parentElement;
+    let title = element.firstElementChild;
+    let picture = element.lastElementChild;
 
     let myModal = document.createElement('div');
     myModal.id = 'my-modal';
@@ -14,14 +15,15 @@ function projectModal(element) {
     myModal.innerHTML = `
         <div class="modal-content">
             <span class="close-modal-btn">&times;</span>
-            <p>Some text in the Modal..</p>
+            <p style="font-weight: bold; font-size: 2rem">${title.textContent}</p>
+            <img src="${picture.attributes['src']}" alt="${picture.attributes['alt']}">
         </div>`;
     document.body.appendChild(myModal)
 
     let closeBtn = document.querySelector(".close-modal-btn");
 
     function closeModal() {
-        document.body.removeChild(myModal);
+        myModal.remove();
     }
 
     // When the user clicks on <span> (x), close the modal

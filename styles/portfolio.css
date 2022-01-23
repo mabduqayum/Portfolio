@@ -1,5 +1,4 @@
 
-
 #portfolio {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -13,6 +12,7 @@
 }
 
 #portfolio .project {
+    cursor: pointer;
 }
 
 .project img {
@@ -21,9 +21,10 @@
 
 .project p {
     color: #08355d;
+    font-size: 1.5rem;
     text-align: center;
-    cursor: pointer;
 }
+
 .project p:hover {
     color: #0f5ea4;
 }
