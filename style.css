@@ -9,6 +9,8 @@ html {
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
+    /*cursor: none;*/
 }
 
 section {
@@ -17,4 +19,8 @@ section {
 
 .spacer {
     flex-grow: 1;
+}
+
+h2 {
+    padding: 10px;
 }

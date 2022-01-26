@@ -55,8 +55,9 @@ header {
     position: absolute;
     bottom: 0;
     width: 100%;
-    font-size: 4rem;
     text-align: center;
+    font-family: ui-monospace;
+    font-size: 4rem;
     text-shadow: 3px 3px 0 #FF000080;
     text-transform: uppercase;
     font-style: italic;
