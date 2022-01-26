@@ -13,11 +13,11 @@
 
 #portfolio .project {
     cursor: pointer;
-    transition: all 1s;
+    transition: all .5s;
 }
 
 .project:hover {
-    filter: hue-rotate(90deg);
+    filter: hue-rotate(120deg);
 }
 
 .project img {

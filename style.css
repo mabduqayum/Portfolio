@@ -5,6 +5,7 @@ html {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -12,4 +13,8 @@ body {
 
 section {
     margin: 1rem;
+}
+
+.spacer {
+    flex-grow: 1;
 }
