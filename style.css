@@ -5,12 +5,24 @@ html {
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
+
+*, *::before, *::after {
+    box-sizing: border-box
+}
+
+/*img,*/
+/*video,*/
+/*iframe {*/
+/*    max-inline-size: 100%;*/
+/*    block-size: auto;*/
+/*}*/
+
 
 body {
     font-family: 'Roboto', sans-serif;
     /*cursor: none;*/
+    min-height: 100vh;
 }
 
 section {
