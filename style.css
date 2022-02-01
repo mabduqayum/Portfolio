@@ -36,3 +36,8 @@ section {
 h2 {
     padding: 1rem;
 }
+
+::selection {
+    background: #09C372BF;
+    color: #fff;
+}
