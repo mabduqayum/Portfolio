@@ -1,8 +1,9 @@
 
 #portfolio {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+    grid-gap: 1rem 2rem;
 }
 
 #portfolio > .portfolio-title {
@@ -12,8 +13,13 @@
 }
 
 #portfolio .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
     transition: all .5s;
+    border: 1px solid grey;
 }
 
 .project:hover {
@@ -21,17 +27,17 @@
 }
 
 .project img {
-    max-width: 40rem;
+    width: 100%;
 }
 
 .project p {
     color: #08355d;
     font-size: 1.5rem;
-    text-align: center;
+    padding: 1rem;
 }
 
-@media (max-width: 768px) {
-    .project img {
-        max-width: calc(100vw - 2rem);
+@media (max-width: 1200px) {
+    #portfolio {
+        grid-template-columns: 1fr;
     }
 }

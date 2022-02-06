@@ -23,6 +23,7 @@ body {
     font-family: 'Roboto', sans-serif;
     /*cursor: none;*/
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 section {
