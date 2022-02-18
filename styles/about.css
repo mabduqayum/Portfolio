@@ -1,30 +1,36 @@
-#about {
+.about {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "title title"
-        "pics pst"
-        "pics pnd";
+        "pics about-text"
+        "pics about-skills";
 }
 
 
-#about > h2:first-child {
+.about > h2:first-child {
     grid-area: title;
-    justify-self: center;
+    text-align: center;
 }
 
-#about > .stack {
+.about > .stack {
     grid-area: pics;
 }
 
-#about > p:nth-of-type(1) {
-    grid-area: pst;
-    align-self: end;
-    max-width: 40rem;
+.about__text, .about__skills {
+    margin-left: 1rem;
 }
 
-#about > p:nth-of-type(2) {
-    grid-area: pnd;
+.about__text {
+    grid-area: about-text;
+    margin-bottom: 1rem;
+    align-self: end;
+    max-width: 40rem;
+    text-align: justify;
+}
+
+.about__skills {
+    grid-area: about-skills;
 }
 
 .stack {
@@ -34,41 +40,47 @@
 
 img.keyboard {
     position: absolute;
-    max-width: 100%;
+    max-width: 90%;
 }
 
 img.user-image {
     position: absolute;
-    left: 30%;
     top: 30%;
+    right: 0;
     max-width: 100%;
 }
 
 
 @media (max-width: 768px) {
-    #about {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "title"
-        "pics"
-        "pst"
-        "pnd";
+    .about {
+        display: flex;
+        flex-direction: column;
     }
 
     .stack {
         position: relative;
-        height: 24rem;
+        height: 21rem;
     }
 
     img.keyboard {
         position: absolute;
+        left: 30%;
+        transform: translateX(-30%);
         max-width: 80%;
     }
 
     img.user-image {
-        left: 20%;
         top: 20%;
+        right: 1rem;
         max-width: calc(100vw - 20% - 2rem);
+    }
+
+    .about__text, .about__skills {
+        margin: 1rem 0 0;
+    }
+
+    .about__text {
+        align-self: normal;
     }
 
 }

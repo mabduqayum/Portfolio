@@ -42,3 +42,18 @@ h2 {
     background: #09C372BF;
     color: #fff;
 }
+
+
+/*a:not([class]) {*/
+a {
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}

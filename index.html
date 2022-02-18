@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.25, minimum-scale=0.75">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable='no'">
     <title>Ali</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/header.css">
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="styles/hamburger-menu.css">
 </head>
 <body>
 <div class='your-cursor'></div>
@@ -21,33 +22,45 @@
 
 <header>
     <nav class="main-nav">
-        <div class="main-nav-logo">Tavakal</div>
+        <div class="main-nav-logo">TAVENO</div>
         <!--        <div class="main-nav-search">-->
         <!--            <label>-->
         <!--                <input type="text">-->
         <!--            </label>-->
         <!--        </div>-->
-        <div class="main-nav-items">
-            <a href="" class="active">MAIN</a>
-            <a href="#about">ABOUT</a>
-            <a href="#portfolio">PORTFOLIO</a>
-            <a href="#contacts">CONTACTS</a>
+        <div id="main-nav-items">
+            <a href="" class="main-nav-item">Main</a>
+            <a href="#about" class="main-nav-item">About</a>
+            <a href="#portfolio" class="main-nav-item">Portfolio</a>
+            <a href="#contacts" class="main-nav-item">Contacts</a>
+        </div>
+        <div id="menu-toggle">
+            <input type="checkbox" id="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div id="menu-items">
+                <a href="" class="main-nav-item">Main</a>
+                <a href="#about" class="main-nav-item">About</a>
+                <a href="#portfolio" class="main-nav-item">Portfolio</a>
+                <a href="#contacts" class="main-nav-item">Contacts</a>
+            </div>
         </div>
     </nav>
-    <h1 class="main-nav-title neon-blue">Ali, Front-end developer</h1>
+    <!--    <h1 class="main-nav-title neon-blue">Ali, Front-end developer</h1>-->
 </header>
-<section id="about">
+<section id="about" class="about">
     <h2>About me</h2>
     <div class="stack">
         <img src="assets/images/keyboard.webp" alt="keyboard" class="keyboard" loading="lazy">
         <img src="assets/images/person.webp" alt="user-image" class="user-image" loading="lazy">
     </div>
-    <p class="about">
+    <p class="about__text">
         Hi, I'm Ali. I've been a junior front-end developer for 3 months now.
         For me, programming is not just a job, it's a hobby.
         I'm open to new knowledge, I like to study new technologies and apply them in practice.
     </p>
-    <p>
+    <p class="about__skills">
         <strong>Skills:</strong>
         HTML, CSS, JS, TS, Angular, Python, Dart, Flutter.
     </p>
@@ -66,6 +79,10 @@
         <img src="assets/images/virtual-piano.webp" alt="virtual piano">
         <p>Virtual Piano</p>
     </div>
+    <div class="project todo-list">
+        <img src="assets/images/todo-list.webp" alt="todo list">
+        <p>To Do List</p>
+    </div>
 </section>
 <section id="contacts">
     <h2>Contacts</h2>
@@ -81,5 +98,5 @@
 </body>
 <script src="main.js"></script>
 <script src="script/modal-button.js"></script>
-<script src="script/cursor.js"></script>
+<!--<script src="script/cursor.js"></script>-->
 </html>

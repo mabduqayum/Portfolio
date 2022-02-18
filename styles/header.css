@@ -18,6 +18,7 @@ header {
 }
 
 .main-nav-logo {
+    font-family: Roboto, serif;
     padding: .75rem 1rem;
 }
 
@@ -34,23 +35,25 @@ header {
     width: 15rem;
 }
 
-.main-nav-items {
+#main-nav-items {
     display: flex;
+    font-size: 1.1rem;
 }
 
-.main-nav-items > a {
-    color: white;
+.main-nav-item {
     padding: .75rem 1rem;
-    text-decoration: none;
-    font-weight: 1000;
+    color: #ccc;
+    font-family: 'Roboto Mono', monospace;
 }
 
-.main-nav-items > a:hover {
+.main-nav-item:hover {
     background-color: #00000050;
+    color: white;
 }
 
-.main-nav-items > a.active {
+.main-nav-item.active {
     background-color: #00000080;
+    color: white;
 }
 
 .main-nav-title {
@@ -69,5 +72,9 @@ header {
 @media (max-width: 768px) {
     .main-nav-title {
         font-size: 2.5rem;
+    }
+
+    #main-nav-items {
+        display: none;
     }
 }
