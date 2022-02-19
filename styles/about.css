@@ -40,7 +40,8 @@
 
 img.keyboard {
     position: absolute;
-    max-width: 90%;
+    max-width: 80%;
+    left: max(10%, 1rem);
 }
 
 img.user-image {
@@ -51,27 +52,26 @@ img.user-image {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .about {
         display: flex;
         flex-direction: column;
     }
 
-    .stack {
-        position: relative;
-        height: 21rem;
+    .about__text {
+        max-width: unset;
     }
 
+    .stack {
+        height: 24rem;
+    }
     img.keyboard {
-        position: absolute;
-        left: 30%;
-        transform: translateX(-30%);
-        max-width: 80%;
+        left: max(5%, 1rem);
     }
 
     img.user-image {
         top: 20%;
-        right: 1rem;
+        right: max(5%, 1rem);
         max-width: calc(100vw - 20% - 2rem);
     }
 
