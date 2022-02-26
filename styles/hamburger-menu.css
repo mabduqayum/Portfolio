@@ -1,108 +1,62 @@
-#menu-toggle {
-    z-index: 11;
-    user-select: none;
-    display: none;
-}
-
-#menu-toggle .main-nav-item {
-    transition: color 0.3s ease;
-}
-
-
-#hamburger-btn {
-    position: absolute;
-    display: block;
-    width: 40px;
-    height: 30px;
-
-    cursor: pointer;
-    opacity: 0;
-    z-index: 12;
-}
-
-#menu-toggle span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
+.container {
     position: relative;
-
-    background: #cdcdcd;
-    border-radius: 3px;
-
-    z-index: 11;
-
-    transform-origin: 4px 0;
-
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    opacity 0.55s ease;
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-#menu-toggle span:first-child {
-    transform-origin: 0 0;
-}
-
-#menu-toggle span:nth-last-child(2) {
-    transform-origin: 0 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#hamburger-btn:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#hamburger-btn:checked ~ span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#hamburger-btn:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
-}
-
-#hamburger-btn:checked ~ #menu-items {
-    display: block;
-}
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu-items {
-    display: none;
+.btn2 {
     position: absolute;
-    width: 100vw;
-    height: 100vw;
-
-    background: #ededed80;
-
-    transform-origin: 0 0;
-    transform: translate(-100%, 0);
-
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    width: 60px;
+    height: 60px;
+    top: 100px;
+    left: 120px;
+    transition-duration: 0.5s;
 }
 
-/*
- * And let's slide it in from the left
- */
-#hamburger-btn:checked ~ #menu-items {
-    transform: none;
+.btn2 .icon {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: 8px;
+    width: 60px;
+    top: 30px;
+    background-color: #212121;
+}
+
+.btn2 .icon:before {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 60px;
+    height: 8px;
+    background-color: #212121;
+    content: "";
+    top: -20px;
+}
+
+.btn2 .icon:after {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 60px;
+    height: 8px;
+    background-color: #212121;
+    content: "";
+    top: 20px;
 }
 
 
-@media (max-width: 768px) {
-    #menu-toggle {
-        display: block;
-    }
+.btn2.open .icon {
+    transition-duration: 0.5s;
+    background: transparent;
+}
+
+.btn2.open .icon:before {
+    transform: rotateZ(45deg) scaleX(1.25) translate(13px, 13px);
+}
+
+.btn2.open .icon:after {
+    transform: rotateZ(-45deg) scaleX(1.25) translate(12px, -12px);
+}
+
+.btn2:hover {
+    cursor: pointer;
 }
