@@ -1,40 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  /*cursor: none;*/
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-section {
-  margin: 1rem;
-}
-
-.spacer {
-  flex-grow: 1;
-}
-
-h2 {
-  padding: 1rem;
-}
-
-::selection {
-  background: #09C372BF;
-  color: #fff;
-}
-
+@import "general";
+@import "hamburger-menu";
 
 body {
   &::-webkit-scrollbar-track {
@@ -45,30 +10,21 @@ body {
     background: #676767;
 
     &:hover {
-      background: linear-gradient(#a43931, #a43931, #1d4350);
+      background: linear-gradient(#a43931, #2a6073, #2a6073);
+    }
+
+    &:active {
+      background: linear-gradient(#a43931, #a43931, #2a6073);
     }
   }
 
   &::-webkit-scrollbar {
     width: 12px;
-    background-color: transparent;
   }
 }
 
-/*a:not([class]) {*/
-a {
-  text-decoration: none;
-}
-
-/*img,*/
-/*video,*/
-/*iframe {*/
-/*    max-inline-size: 100%;*/
-/*    block-size: auto;*/
-/*}*/
-
 header {
-  background: url("assets/images/bg.webp") no-repeat fixed;
+  background: url("../assets/images/bg.webp") no-repeat fixed;
   background-size: cover;
   background-position-y: 42px;
   color: white;
@@ -279,10 +235,6 @@ footer {
   header {
     #main-nav-items {
       display: none;
-    }
-
-    .main-nav-title {
-      font-size: 2.5rem;
     }
   }
 

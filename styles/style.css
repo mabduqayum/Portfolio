@@ -13,7 +13,6 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  /*cursor: none;*/
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -35,20 +34,6 @@ h2 {
   color: #fff;
 }
 
-body::-webkit-scrollbar-track {
-  background: #424242;
-}
-body::-webkit-scrollbar-thumb {
-  background: #676767;
-}
-body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(#a43931, #a43931, #1d4350);
-}
-body::-webkit-scrollbar {
-  width: 12px;
-  background-color: transparent;
-}
-
 /*a:not([class]) {*/
 a {
   text-decoration: none;
@@ -60,8 +45,73 @@ a {
 /*    max-inline-size: 100%;*/
 /*    block-size: auto;*/
 /*}*/
+.main-nav .btn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 100px;
+  left: 120px;
+  transition-duration: 0.5s;
+  z-index: 111;
+}
+.main-nav .btn:hover {
+  cursor: pointer;
+}
+.main-nav .btn .icon {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: 8px;
+  width: 60px;
+  top: 30px;
+  background-color: #212121;
+}
+.main-nav .btn .icon:before {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 60px;
+  height: 8px;
+  background-color: #212121;
+  content: "";
+  top: -20px;
+}
+.main-nav .btn .icon:after {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 60px;
+  height: 8px;
+  background-color: #212121;
+  content: "";
+  top: 20px;
+}
+.main-nav .btn.open .icon {
+  transition-duration: 0.5s;
+  background: transparent;
+}
+.main-nav .btn.open .icon:before {
+  transform: rotateZ(45deg) scaleX(1.25) translate(13px, 13px);
+}
+.main-nav .btn.open .icon:after {
+  transform: rotateZ(-45deg) scaleX(1.25) translate(12px, -12px);
+}
+
+body::-webkit-scrollbar-track {
+  background: #424242;
+}
+body::-webkit-scrollbar-thumb {
+  background: #676767;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(#a43931, #2a6073, #2a6073);
+}
+body::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(#a43931, #a43931, #2a6073);
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
 header {
-  background: url("assets/images/bg.webp") no-repeat fixed;
+  background: url("../assets/images/bg.webp") no-repeat fixed;
   background-size: cover;
   background-position-y: 42px;
   color: white;
@@ -241,9 +291,6 @@ footer {
 @media (max-width: 768px) {
   header #main-nav-items {
     display: none;
-  }
-  header .main-nav-title {
-    font-size: 2.5rem;
   }
 
   section.about {
