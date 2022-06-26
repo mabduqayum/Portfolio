@@ -5,72 +5,86 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable='no'">
     <title>Ali</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="script/menu-button.js" defer></script>
+    <script src="script/modal-button.js" defer></script>
 </head>
 <body>
 
-<header>
+<header id="main">
     <nav class="main-nav">
         <div class="main-nav-logo">TAVENO</div>
-        <div id="main-nav-items">
-            <a href="" class="main-nav-item">Main</a>
+        <div class="main-nav-icon"><img src="assets/icons/icon-menu.svg" alt="" onclick="onMenuClick(this)"></div>
+        <div id="main-nav-items" class="main-nav-items">
+            <a href="#main" class="main-nav-item">Main</a>
             <a href="#about" class="main-nav-item">About</a>
             <a href="#portfolio" class="main-nav-item">Portfolio</a>
             <a href="#contacts" class="main-nav-item">Contacts</a>
         </div>
-        <div class="menu btn" data-menu="2">
-            <div class="icon"></div>
-        </div>
     </nav>
 </header>
+
 <section id="about" class="about">
-    <h2>About me</h2>
+    <h1>About me</h1>
     <div class="stack">
         <img src="assets/images/keyboard.webp" alt="keyboard" class="keyboard" loading="lazy">
-        <img src="assets/images/person.webp" alt="user-image" class="user-image" loading="lazy">
+        <img src="assets/images/services-info.jpg" alt="user-image" class="user-image" loading="lazy">
     </div>
-    <p class="about__text">
-        Hi, I'm Ali. I've been a junior front-end developer for 6 months now.
-        For me, programming is not just a job, it's a hobby.
-        I'm open to new knowledge, I like to study new technologies and apply them in practice.
-    </p>
-    <p class="about__skills">
-        <strong>Skills:</strong>
-        HTML, CSS, JS, TS, Angular, Python, Dart, Flutter.
-    </p>
+    <div class="about--paragraph">
+        <p class="about__text">
+            Hi, I'm Ali. I've been a junior front-end developer for <span id="work-time"></span> now.
+            For me, programming is not just a job, it's a hobby.
+            I'm open to new knowledge, I like to study new technologies and apply them in practice.
+        </p>
+        <p class="about__skills">
+            <strong>Skills:</strong>
+            HTML, CSS, JS, TS, Angular, Python, Dart, Flutter.
+        </p>
+    </div>
 </section>
+
 <section id="portfolio" class="portfolio">
     <h2 class="portfolio-title">Portfolio</h2>
-    <div class="project case-converter">
-        <img src="assets/images/case-converter.webp" alt="case converter">
-        <p>Case Converter</p>
-    </div>
-    <div class="project flashcards">
-        <img src="assets/images/flash-cards.webp" alt="world capitals">
-        <p>Flashcards</p>
-    </div>
-    <div class="project virtual-piano">
-        <img src="assets/images/virtual-piano.webp" alt="virtual piano">
-        <p>Virtual Piano</p>
-    </div>
-    <div class="project todo-list">
-        <img src="assets/images/todo-list.webp" alt="todo list">
-        <p>To Do List</p>
+    <div class="projects">
+        <div class="project case-converter" onclick="openProjectPreview(this, 'https://mabduqayum.github.io/text-case-converter')">
+            <img src="assets/images/case-converter.webp" alt="case converter">
+            <p>Case Converter</p>
+        </div>
+        <div class="project flashcards" onclick="openProjectPreview(this, 'https://mabduqayum.github.io/flip-cards')">
+            <img src="assets/images/flash-cards.webp" alt="world capitals">
+            <p>Flashcards</p>
+        </div>
+        <div class="project virtual-piano" onclick="openProjectPreview(this, 'https://mabduqayum.github.io/virtual-piano')">
+            <img src="assets/images/virtual-piano.webp" alt="virtual piano">
+            <p>Virtual Piano</p>
+        </div>
+        <div class="project todo-list" onclick="openProjectPreview(this, 'https://mabduqayum.github.io/To-Do-List')">
+            <img src="assets/images/todo-list.webp" alt="todo list">
+            <p>To Do List</p>
+        </div>
     </div>
 </section>
+
 <section id="contacts" class="contacts">
     <h2>Contacts</h2>
     <div class="icons">
-        <img src="assets/icons/github.svg" alt="github.svg">
-        <img src="assets/icons/facebook.svg" alt="github.svg">
-        <img src="assets/icons/instagram.svg" alt="github.svg">
-        <img src="assets/icons/twitter.svg" alt="github.svg">
+        <a href="https://github.com/mabduqayum" target="_blank">
+            <img src="assets/icons/github.svg" alt="github.svg">
+        </a>
+        <a href="" target="_blank">
+            <img src="assets/icons/facebook.svg" alt="github.svg">
+        </a>
+        <a href="" target="_blank">
+            <img src="assets/icons/instagram.svg" alt="github.svg">
+        </a>
+        <a href="" target="_blank">
+            <img src="assets/icons/twitter.svg" alt="github.svg">
+        </a>
     </div>
 </section>
+
 <footer>Footer</footer>
 
 </body>
-<script src="main.js"></script>
-<script src="script/modal-button.js"></script>
 </html>

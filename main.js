@@ -1,6 +1,6 @@
 "use strict"
 
-let mainNav = document.querySelectorAll('.main-nav-item > a')
+let mainNav = document.querySelectorAll('.main-nav-item')
 let activeNavIndex = 0;
 
 for (let i = 0; i < mainNav.length; i++) {
@@ -13,3 +13,10 @@ for (let i = 0; i < mainNav.length; i++) {
         }
     })
 }
+
+
+let experienceInitDate = new Date('2021/8/20');
+
+let workTimeElement = document.getElementById('work-time')
+
+workTimeElement.innerText = new Date(Date.now() - experienceInitDate).toLocaleDateString('ru');
