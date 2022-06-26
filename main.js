@@ -1,6 +1,6 @@
 "use strict"
 
-let mainNav = document.querySelectorAll('.main-nav-item')
+const mainNav = document.querySelectorAll('.main-nav-item')
 let activeNavIndex = 0;
 
 for (let i = 0; i < mainNav.length; i++) {
@@ -15,8 +15,30 @@ for (let i = 0; i < mainNav.length; i++) {
 }
 
 
-let experienceInitDate = new Date('2021/8/20');
+function customDateFormat(date) {
+    let rez = ''
+    let years = date.getFullYear() - 1970;
+    let months = date.getMonth();
+    if (years) {
+        rez += years;
+        rez += ' year'
+        if (years > 1) rez += 's';
+    }
+    if (months) {
+        if (years) {
+            rez += ' and ';
+        }
+        rez += months;
+        rez += ' month'
+        if (months > 1) rez += 's';
+    }
+    return rez;
+}
 
-let workTimeElement = document.getElementById('work-time')
 
-workTimeElement.innerText = new Date(Date.now() - experienceInitDate).toLocaleDateString('ru');
+const experienceInitDate = new Date('2021/08/20');
+const totalExperience = new Date(Date.now() - experienceInitDate)
+
+const workTimeElement = document.getElementById('work-time')
+
+workTimeElement.innerText = customDateFormat(totalExperience);
