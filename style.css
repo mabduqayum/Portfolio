@@ -41,6 +41,7 @@ h2 {
         background-color: #fff
     }
     75% {
+        color: white;
         background-color: #1C424F80;
     }
     100% {
@@ -166,13 +167,13 @@ header .main-nav .main-nav-items .main-nav-item.active {
 
 header .main-nav-title {
     position: absolute;
-    bottom: 0;
+    bottom: 4rem;
     width: 100%;
     text-align: center;
     font-family: ui-monospace;
     font-size: 4rem;
     text-shadow: 3px 3px 0 #FF000080;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-style: italic;
 }
 
@@ -187,6 +188,7 @@ section.about > h1:first-child {
 }
 
 section.about > .stack {
+    top: 1rem;
     flex-basis: 50%;
     position: relative;
     height: 30rem;
@@ -343,6 +345,10 @@ footer {
         position: fixed;
         right: 0;
         z-index: 2;
+    }
+
+    header .main-nav-title {
+        display: none;
     }
 
     section.about {
