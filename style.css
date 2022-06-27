@@ -87,6 +87,7 @@ body::-webkit-scrollbar {
 }
 
 header {
+    position: relative;
     background-image: url("assets/images/bg.webp");
     background-repeat: no-repeat;
     background-attachment: fixed;
