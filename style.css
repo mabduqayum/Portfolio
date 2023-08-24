@@ -320,6 +320,46 @@ footer {
     height: 14rem;
 }
 
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.copyright {
+    flex: 1;
+    text-align: right;
+}
+
+.copyright p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
 
 @media (max-width: 768px) {
     header {
