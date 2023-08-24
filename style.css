@@ -7,9 +7,6 @@
     box-sizing: border-box;
 }
 
-:root {
-}
-
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 1rem;
@@ -221,13 +218,6 @@ section.about .about__text {
     text-align: justify;
 }
 
-section.about .about__skills {
-}
-
-section.portfolio {
-
-}
-
 section.portfolio > .portfolio-title {
     text-align: center;
 }
@@ -311,13 +301,6 @@ section.contacts > .icons {
 section.contacts > .icons img {
     width: 3rem;
     height: 3rem;
-}
-
-footer {
-    background-color: #1e1010;
-    color: white;
-    padding: 1rem;
-    height: 14rem;
 }
 
 /* Footer Styles */
